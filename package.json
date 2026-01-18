@@ -1,0 +1,19 @@
+{
+  "name": "html-tags-tutor",
+  "private": true,
+  "workspaces": ["frontend", "backend"],
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c auto \"npm --workspace backend run start\" \"npm --workspace frontend run start\"",
+    "build": "npm --workspace frontend run build",
+    "start": "npm --workspace backend start",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down -v",
+    "db:reset": "npm run db:down && npm run db:up",
+    "backend:init": "npm --workspace backend run db:init",
+    "backend:seed": "npm --workspace backend run db:seed",
+    "setup": "npm install && npm run db:up && npm run backend:init && npm run backend:seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
