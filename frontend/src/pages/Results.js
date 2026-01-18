@@ -8,8 +8,6 @@ export default function Results() {
   return (
     <div className="card" style={{ marginTop: 18 }}>
       <h1 className="h1">Останні результати</h1>
-      <p className="small">Зберігаються в PostgreSQL (таблиця results).</p>
-
       <div className="grid" style={{ marginTop: 12 }}>
         {items.map(r => (
           <div key={r.id} className="card" style={{ display:"flex", justifyContent:"space-between" }}>
