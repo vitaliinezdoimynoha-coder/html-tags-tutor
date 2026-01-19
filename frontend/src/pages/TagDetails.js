@@ -48,7 +48,7 @@ export default function TagDetails() {
 
       <div className="grid" style={{ gap: 14 }}>
         <div className="card">
-          <div style={{ fontWeight: 800, marginBottom: 10 }}>Спробуй сам (Monaco Editor)</div>
+          <div style={{ fontWeight: 800, marginBottom: 10 }}>Спробуй сам</div>
           <div style={{ height: 220, borderRadius: 14, overflow: "hidden", border: "1px solid rgba(255,255,255,0.14)" }}>
             <Editor
               height="220px"
