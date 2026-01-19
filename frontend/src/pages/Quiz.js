@@ -11,9 +11,6 @@ export default function Quiz() {
 
   const total = questions.length;
 
-  console.log("answers", answers);
-console.log("first question", questions[0]);
-
 
 const score = useMemo(() => {
   let s = 0;
