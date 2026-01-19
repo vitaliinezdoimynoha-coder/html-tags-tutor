@@ -8,7 +8,6 @@ export default function Home() {
   const [tags, setTags] = useState([]);
 
   useEffect(() => { getTags({ q, category }).then(setTags); }, [q, category]);
-  if (!tags.length) return <div className="card" style={{ marginTop: 18 }}>Завантаження сторiнки...</div>;
 
   const categories = useMemo(() => ["", ...Array.from(new Set(tags.map(t => t.category)))], [tags]);
 
